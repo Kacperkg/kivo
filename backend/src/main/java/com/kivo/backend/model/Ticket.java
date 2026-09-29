@@ -61,6 +61,20 @@ public class Ticket {
         this.updatedAt = Instant.now();
     }
 
+    public void changeStatus(TicketStatus newStatus) {
+        this.status = newStatus;
+    }
+
+    public void updateDetails(
+        String newTitle,
+        String newDescription,
+        Priority newPriority
+    ) {
+        this.title = newTitle;
+        this.description = newDescription;
+        this.priority = newPriority;
+    }
+
     public String getTitle() {
         return this.title;
     }
@@ -88,4 +102,5 @@ public class Ticket {
     public Instant getUpdatedAt() {
         return this.updatedAt;
     }
+
 }
