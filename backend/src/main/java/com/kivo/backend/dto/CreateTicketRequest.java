@@ -1,5 +1,10 @@
 package com.kivo.backend.dto;
 
-public class CreateTicketRequest {
+import com.kivo.backend.model.Priority;
+public record CreateTicketRequest(
+    String title,
+    String description,
+    Priority priority
+) {
     
 }
